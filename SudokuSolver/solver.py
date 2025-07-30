@@ -41,7 +41,7 @@ def readfile():
     #The sudoku grid is stored in infile.txt, this function reads the grid and updates it with the given information.
     global squares
     f = open('infile.txt', 'r')
-    grid = f.read().replace('\n', '')
+    grid = f.read().replace('\n', '').replace(' ', '')
     f.close()
     for x in range(81):
         if grid[x] != '0':
